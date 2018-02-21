@@ -7,6 +7,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- Angular JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="controllers/user.js"></script>
 
 
 <html lang="en">
@@ -15,7 +18,7 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <title>Blank App</title>
     </head>
-    <body>
+    <body ng-app="myApp" ng-controller="registerCtrl">
         <div class="container-fluid">
             <p> Hello World! </p>
         </div>
@@ -23,17 +26,4 @@
     </body>
 </html>
 
-<script type = "text/javascript">
-    var mysql = require('mysql');
 
-    var con = mysql.createConnection({
-        host: "152.23.213.197",
-        user: "remote",
-        password: "Remote1"
-    });
-
-    con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-    });
-</script>
