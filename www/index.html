@@ -8,7 +8,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!-- Angular JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 <script src="controllers/user.js"></script>
 
 
@@ -20,7 +20,17 @@
     </head>
     <body ng-app="myApp" ng-controller="registerCtrl">
         <div class="container-fluid">
-            <p> Hello World! </p>
+            <form>
+                First Name<br>
+                <input type="text" ng-model="firstname"><br>
+                Last Name<br>
+                <input type="text" ng-model="lastname"><br>
+                Age:<br>
+                <input type="number" ng-model="age"><br>
+                Address:<br>
+                <input type="text" ng-model="address"><br>
+                <button type="button" ng-click="register()">Register</button>
+            </form>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
     </body>
